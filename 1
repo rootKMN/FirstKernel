@@ -1,0 +1,14 @@
+#Посмотрел ядро для Ubuntu(всё выполнялось под sudo правами)
+uname -r
+#Была версия  5.0.2
+#Посмотрел какие репозитории были для ubuntu(выбрал - https://launchpad.net/~tuxinvader )
+sudo add-apt-repository ppa:tuxinvader/lts-mainline -y
+#установил репозиторий и обновил список пакетов
+apt update
+#нашёл на репозитории какую именно версию он предлогает (linux-generic-6.02) и выполнил установку 
+apt-get install linux-generic-6.02 -y
+#После установки перезагрузил VM
+reboot
+#Проверил версию ядра
+uname -r 
+#Версия стала 6.2.16
